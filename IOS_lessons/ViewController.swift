@@ -7,11 +7,18 @@
 
 import UIKit
 
+enum ArithmeticOperators {
+    case minus
+    case plus
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var topTextLabel: UILabel!
     @IBOutlet weak var subTitleTextLabel: UILabel!
     @IBOutlet weak var changeStateButton: UIButton!
+    @IBOutlet weak var changeStateMinusButton: UIButton!
+    @IBOutlet weak var changeStatePlusButton: UIButton!
     
     var count: Int = 0 // var count = 0
     
@@ -24,6 +31,29 @@ class ViewController: UIViewController {
         subTitleTextLabel.font = .italicSystemFont(ofSize: 40)
         
     }
+    
+    func newFontSize(_ label: UILabel, arithmeticOperators: ArithmeticOperators) {
+        var oldSize = label.font.pointSize
+        
+        switch arithmeticOperators {
+        case .minus:
+            oldSize -= 1
+        case .plus:
+            oldSize += 1
+        }
+        
+        label.font = .systemFont(ofSize: oldSize)
+        label.sizeToFit()
+    }
+    @IBAction func changeStateMinusTap(_ sender: Any) {
+        newFontSize(topTextLabel, arithmeticOperators: .minus)
+        newFontSize(subTitleTextLabel, arithmeticOperators: .minus)
+    }
+    @IBAction func changeStatePlusTap(_ sender: Any) {
+        newFontSize(topTextLabel, arithmeticOperators: .plus)
+        newFontSize(subTitleTextLabel, arithmeticOperators: .plus)
+    }
+    
     @IBAction func changeTextStateTap(_ sender: Any) {
         if count == 0 {
             subTitleTextLabel.text = "Ой, нажалась кнопка"
