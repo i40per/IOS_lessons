@@ -23,13 +23,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8g-b5-oZK">
-                                <rect key="frame" x="20" y="256" width="374" height="43"/>
+                                <rect key="frame" x="20" y="206" width="374" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43B-YL-1je">
-                                <rect key="frame" x="20" y="319" width="374" height="31"/>
+                                <rect key="frame" x="20" y="399" width="374" height="31"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
@@ -38,30 +38,72 @@
                                     <action selector="changeTextStateTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2gb-Pb-sub"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDM-CI-JOU">
+                                <rect key="frame" x="20" y="460" width="374" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Minus"/>
+                                <connections>
+                                    <action selector="changeStateMinusTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sRw-Ot-8c2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-ZS-cbg">
+                                <rect key="frame" x="20" y="521" width="374" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Plus"/>
+                                <connections>
+                                    <action selector="changeStatePlusTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hoy-h6-yzi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9q-ZQ-NPX">
+                                <rect key="frame" x="20" y="582" width="374" height="31"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                                <connections>
+                                    <action selector="changeCountButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bi-Ms-BbJ"/>
+                                    <action selector="changeStateButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDZ-dN-uqm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="X8g-b5-oZK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0rQ-o7-OV4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wig-ZS-cbg" secondAttribute="trailing" constant="20" id="2he-Ya-Xv5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X8g-b5-oZK" secondAttribute="trailing" constant="20" id="44m-fu-dZQ"/>
+                            <constraint firstItem="sDM-CI-JOU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BR6-Zn-Afv"/>
                             <constraint firstItem="ZJr-EU-Et9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ca7-3h-br3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X8g-b5-oZK" secondAttribute="trailing" constant="20" id="JOd-88-2u8"/>
-                            <constraint firstItem="43B-YL-1je" firstAttribute="top" secondItem="X8g-b5-oZK" secondAttribute="bottom" constant="20" id="KjY-c8-pMo"/>
-                            <constraint firstItem="X8g-b5-oZK" firstAttribute="top" secondItem="ZJr-EU-Et9" secondAttribute="bottom" constant="90" id="NRV-Tg-3tW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="43B-YL-1je" secondAttribute="trailing" constant="20" id="b6Q-bi-m1k"/>
-                            <constraint firstItem="43B-YL-1je" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bLd-7p-x2s"/>
+                            <constraint firstItem="sDM-CI-JOU" firstAttribute="top" secondItem="43B-YL-1je" secondAttribute="bottom" constant="30" id="DyN-vt-ycp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F9q-ZQ-NPX" secondAttribute="trailing" constant="20" id="IgI-qb-LrW"/>
+                            <constraint firstItem="X8g-b5-oZK" firstAttribute="top" secondItem="ZJr-EU-Et9" secondAttribute="bottom" constant="40" id="NRV-Tg-3tW"/>
+                            <constraint firstItem="43B-YL-1je" firstAttribute="top" secondItem="X8g-b5-oZK" secondAttribute="bottom" constant="150" id="Rok-yG-hiV"/>
+                            <constraint firstItem="Wig-ZS-cbg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bDF-gr-vtw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDM-CI-JOU" secondAttribute="trailing" constant="20" id="cgO-PU-LL8"/>
+                            <constraint firstItem="Wig-ZS-cbg" firstAttribute="top" secondItem="sDM-CI-JOU" secondAttribute="bottom" constant="30" id="hkx-AL-c07"/>
+                            <constraint firstItem="F9q-ZQ-NPX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jOp-pM-7bT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="43B-YL-1je" secondAttribute="trailing" constant="20" id="jol-1a-ueg"/>
+                            <constraint firstItem="43B-YL-1je" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mdZ-l7-gWx"/>
                             <constraint firstAttribute="trailing" secondItem="ZJr-EU-Et9" secondAttribute="trailing" constant="20" id="okW-R4-bm5"/>
                             <constraint firstItem="ZJr-EU-Et9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sis-6n-S8h"/>
+                            <constraint firstItem="F9q-ZQ-NPX" firstAttribute="top" secondItem="Wig-ZS-cbg" secondAttribute="bottom" constant="30" id="twx-PM-rYV"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeCountButton" destination="F9q-ZQ-NPX" id="c4r-Kn-Vrn"/>
                         <outlet property="changeStateButton" destination="43B-YL-1je" id="tQ7-qd-V6E"/>
+                        <outlet property="changeStateMinusButton" destination="sDM-CI-JOU" id="Xfx-vT-6HG"/>
+                        <outlet property="changeStatePlusButton" destination="Wig-ZS-cbg" id="T8x-gO-rgH"/>
                         <outlet property="subTitleTextLabel" destination="X8g-b5-oZK" id="VEt-dv-d1y"/>
                         <outlet property="topTextLabel" destination="ZJr-EU-Et9" id="PdY-OK-wkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-377" y="58"/>
+            <point key="canvasLocation" x="-3852" y="-26"/>
         </scene>
     </scenes>
     <resources>

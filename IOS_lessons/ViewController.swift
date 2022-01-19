@@ -7,14 +7,22 @@
 
 import UIKit
 
+enum ArithmeticOperators {
+    case minus
+    case plus
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var topTextLabel: UILabel!
     @IBOutlet weak var subTitleTextLabel: UILabel!
     @IBOutlet weak var changeStateButton: UIButton!
+    @IBOutlet weak var changeStateMinusButton: UIButton!
+    @IBOutlet weak var changeStatePlusButton: UIButton!
+    @IBOutlet weak var changeCountButton: UIButton!
     
     var count: Int = 0 // var count = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +32,44 @@ class ViewController: UIViewController {
         subTitleTextLabel.font = .italicSystemFont(ofSize: 40)
         
     }
+    
+    func newFontSize(_ label: UILabel, arithmeticOperators: ArithmeticOperators) {
+        var oldSize = label.font.pointSize
+        
+        switch arithmeticOperators {
+        case .minus:
+            oldSize -= 1
+        case .plus:
+            oldSize += 1
+        }
+        
+        label.font = .systemFont(ofSize: oldSize)
+        label.sizeToFit()
+    }
+    @IBAction func changeCountButtonTap(_ sender: Any) {
+        if count == 0 {
+            changeCountButton.setTitleColor(.red, for: .normal)
+        } else if count == 1 {
+            changeCountButton.setTitleColor(.blue, for: .normal)
+        } else if count == 2 {
+            changeCountButton.setTitleColor(.yellow, for: .normal)
+        } else if count == 3 {
+            changeCountButton.setTitleColor(.brown, for: .normal)
+        } else if count == 4 {
+            changeCountButton.setTitleColor(.orange, for: .normal)
+        }
+    }
+    
+    
+    @IBAction func changeStateMinusTap(_ sender: Any) {
+        newFontSize(topTextLabel, arithmeticOperators: .minus)
+        newFontSize(subTitleTextLabel, arithmeticOperators: .minus)
+    }
+    @IBAction func changeStatePlusTap(_ sender: Any) {
+        newFontSize(topTextLabel, arithmeticOperators: .plus)
+        newFontSize(subTitleTextLabel, arithmeticOperators: .plus)
+    }
+    
     @IBAction func changeTextStateTap(_ sender: Any) {
         if count == 0 {
             subTitleTextLabel.text = "Ой, нажалась кнопка"
