@@ -60,12 +60,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9q-ZQ-NPX">
                                 <rect key="frame" x="20" y="582" width="374" height="31"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
                                 <connections>
-                                    <action selector="changeCountButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bi-Ms-BbJ"/>
-                                    <action selector="changeStateButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDZ-dN-uqm"/>
+                                    <action selector="changeCountButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWq-Xf-Fm5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3852" y="-26"/>
+            <point key="canvasLocation" x="-5062" y="-85"/>
         </scene>
     </scenes>
     <resources>
