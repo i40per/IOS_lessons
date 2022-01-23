@@ -66,9 +66,19 @@
                                     <action selector="changeCountButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWq-Xf-Fm5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJO-oK-P9t">
+                                <rect key="frame" x="20" y="633" width="374" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Open new screen"/>
+                                <connections>
+                                    <segue destination="ehk-fc-Cxp" kind="show" id="MOJ-nf-9rI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="X8g-b5-oZK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0rQ-o7-OV4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wig-ZS-cbg" secondAttribute="trailing" constant="20" id="2he-Ya-Xv5"/>
@@ -78,13 +88,16 @@
                             <constraint firstItem="sDM-CI-JOU" firstAttribute="top" secondItem="43B-YL-1je" secondAttribute="bottom" constant="30" id="DyN-vt-ycp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F9q-ZQ-NPX" secondAttribute="trailing" constant="20" id="IgI-qb-LrW"/>
                             <constraint firstItem="X8g-b5-oZK" firstAttribute="top" secondItem="ZJr-EU-Et9" secondAttribute="bottom" constant="40" id="NRV-Tg-3tW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RJO-oK-P9t" secondAttribute="trailing" constant="20" id="Rhq-Lg-rJ5"/>
                             <constraint firstItem="43B-YL-1je" firstAttribute="top" secondItem="X8g-b5-oZK" secondAttribute="bottom" constant="150" id="Rok-yG-hiV"/>
+                            <constraint firstItem="RJO-oK-P9t" firstAttribute="top" secondItem="F9q-ZQ-NPX" secondAttribute="bottom" constant="20" id="aNM-tg-oj1"/>
                             <constraint firstItem="Wig-ZS-cbg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bDF-gr-vtw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDM-CI-JOU" secondAttribute="trailing" constant="20" id="cgO-PU-LL8"/>
                             <constraint firstItem="Wig-ZS-cbg" firstAttribute="top" secondItem="sDM-CI-JOU" secondAttribute="bottom" constant="30" id="hkx-AL-c07"/>
                             <constraint firstItem="F9q-ZQ-NPX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jOp-pM-7bT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="43B-YL-1je" secondAttribute="trailing" constant="20" id="jol-1a-ueg"/>
                             <constraint firstItem="43B-YL-1je" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mdZ-l7-gWx"/>
+                            <constraint firstItem="RJO-oK-P9t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oda-JS-fbS"/>
                             <constraint firstAttribute="trailing" secondItem="ZJr-EU-Et9" secondAttribute="trailing" constant="20" id="okW-R4-bm5"/>
                             <constraint firstItem="ZJr-EU-Et9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sis-6n-S8h"/>
                             <constraint firstItem="F9q-ZQ-NPX" firstAttribute="top" secondItem="Wig-ZS-cbg" secondAttribute="bottom" constant="30" id="twx-PM-rYV"/>
@@ -101,10 +114,60 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5062" y="-85"/>
+            <point key="canvasLocation" x="-6352" y="-166"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="MnH-ob-ARf">
+            <objects>
+                <viewController id="ehk-fc-Cxp" customClass="SecondViewController" customModule="IOS_lessons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XkX-Ei-oZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мой второй экран" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jK-Bf-TQD">
+                                <rect key="frame" x="20" y="20" width="374" height="43"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua7-a8-ZeO">
+                                <rect key="frame" x="20" y="83" width="60.5" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Close"/>
+                                <connections>
+                                    <segue destination="BXP-VW-dyq" kind="unwind" unwindAction="unwindToViewController:" id="nDB-cx-9aF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ar2-xx-5nE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="5jK-Bf-TQD" firstAttribute="top" secondItem="ar2-xx-5nE" secondAttribute="top" constant="20" id="196-N2-8hz"/>
+                            <constraint firstItem="ar2-xx-5nE" firstAttribute="trailing" secondItem="5jK-Bf-TQD" secondAttribute="trailing" constant="20" id="H9A-wr-qbO"/>
+                            <constraint firstItem="ua7-a8-ZeO" firstAttribute="top" secondItem="5jK-Bf-TQD" secondAttribute="bottom" constant="20" id="dI2-AE-uIz"/>
+                            <constraint firstItem="ua7-a8-ZeO" firstAttribute="leading" secondItem="ar2-xx-5nE" secondAttribute="leading" constant="20" id="hIb-89-6lz"/>
+                            <constraint firstItem="5jK-Bf-TQD" firstAttribute="leading" secondItem="ar2-xx-5nE" secondAttribute="leading" constant="20" id="zqF-fo-I5K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FBW-N2-Gun"/>
+                    <connections>
+                        <outlet property="topLabel" destination="5jK-Bf-TQD" id="yWL-oR-ecD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ktr-RL-fqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BXP-VW-dyq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-5509" y="-166"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

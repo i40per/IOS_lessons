@@ -60,6 +60,8 @@ class ViewController: UIViewController {
         changeCountButton.setTitle("\(index + 1)", for: .normal)
     }
     
+    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
+    }
     
     @IBAction func changeStateMinusTap(_ sender: Any) {
         newFontSize(topTextLabel, arithmeticOperators: .minus)
