@@ -153,6 +153,16 @@
                                     <action selector="manualShowScreen:" destination="ehk-fc-Cxp" eventType="touchUpInside" id="SRk-lP-Vnk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K48-0q-icQ">
+                                <rect key="frame" x="20" y="197" width="374" height="31"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="My segue screen"/>
+                                <connections>
+                                    <segue destination="0Za-4A-hDF" kind="show" id="hss-9f-evy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ar2-xx-5nE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -160,10 +170,14 @@
                         <constraints>
                             <constraint firstItem="5jK-Bf-TQD" firstAttribute="top" secondItem="ar2-xx-5nE" secondAttribute="top" constant="20" id="196-N2-8hz"/>
                             <constraint firstItem="ar2-xx-5nE" firstAttribute="trailing" secondItem="5jK-Bf-TQD" secondAttribute="trailing" constant="20" id="H9A-wr-qbO"/>
+                            <constraint firstItem="ar2-xx-5nE" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ua7-a8-ZeO" secondAttribute="trailing" symbolic="YES" id="P5e-Ip-qJ8"/>
+                            <constraint firstItem="K48-0q-icQ" firstAttribute="leading" secondItem="ar2-xx-5nE" secondAttribute="leading" constant="20" id="Y2x-si-z41"/>
+                            <constraint firstItem="K48-0q-icQ" firstAttribute="top" secondItem="xfe-EE-Fr0" secondAttribute="bottom" constant="30" id="Zly-vd-eS5"/>
                             <constraint firstItem="ua7-a8-ZeO" firstAttribute="top" secondItem="5jK-Bf-TQD" secondAttribute="bottom" constant="20" id="dI2-AE-uIz"/>
                             <constraint firstItem="ar2-xx-5nE" firstAttribute="trailing" secondItem="xfe-EE-Fr0" secondAttribute="trailing" constant="20" id="fG1-lU-Fad"/>
                             <constraint firstItem="ua7-a8-ZeO" firstAttribute="leading" secondItem="ar2-xx-5nE" secondAttribute="leading" constant="20" id="hIb-89-6lz"/>
                             <constraint firstItem="xfe-EE-Fr0" firstAttribute="top" secondItem="5jK-Bf-TQD" secondAttribute="bottom" constant="80" id="nWK-PM-p8R"/>
+                            <constraint firstItem="ar2-xx-5nE" firstAttribute="trailing" secondItem="K48-0q-icQ" secondAttribute="trailing" constant="20" id="pjH-0e-7gk"/>
                             <constraint firstItem="xfe-EE-Fr0" firstAttribute="leading" secondItem="ar2-xx-5nE" secondAttribute="leading" constant="20" id="vgU-gy-lmO"/>
                             <constraint firstItem="5jK-Bf-TQD" firstAttribute="leading" secondItem="ar2-xx-5nE" secondAttribute="leading" constant="20" id="zqF-fo-I5K"/>
                         </constraints>
@@ -177,6 +191,51 @@
                 <exit id="BXP-VW-dyq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-5509" y="-166"/>
+        </scene>
+        <!--My Static Screen-->
+        <scene sceneID="Bdj-pj-0kN">
+            <objects>
+                <viewController id="0Za-4A-hDF" customClass="MyStaticScreen" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HoE-D1-yT9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My static Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sc-Ay-vhN">
+                                <rect key="frame" x="20" y="20" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yK3-Vp-PWj">
+                                <rect key="frame" x="20" y="76" width="78.5" height="45.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="back">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="cp2-nW-7pr" kind="unwind" unwindAction="unwindToSecondViewController:" id="SRY-rp-M3I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JuQ-Z6-abQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yK3-Vp-PWj" firstAttribute="leading" secondItem="JuQ-Z6-abQ" secondAttribute="leading" constant="20" id="0V1-UC-hcU"/>
+                            <constraint firstItem="9Sc-Ay-vhN" firstAttribute="leading" secondItem="JuQ-Z6-abQ" secondAttribute="leading" constant="20" id="6e6-Ca-LBA"/>
+                            <constraint firstItem="JuQ-Z6-abQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yK3-Vp-PWj" secondAttribute="trailing" symbolic="YES" id="6xI-hr-Dyk"/>
+                            <constraint firstItem="9Sc-Ay-vhN" firstAttribute="top" secondItem="JuQ-Z6-abQ" secondAttribute="top" constant="20" id="VTQ-Hx-kuW"/>
+                            <constraint firstItem="yK3-Vp-PWj" firstAttribute="top" secondItem="9Sc-Ay-vhN" secondAttribute="bottom" constant="20" id="jiC-OJ-dUp"/>
+                            <constraint firstItem="JuQ-Z6-abQ" firstAttribute="trailing" secondItem="9Sc-Ay-vhN" secondAttribute="trailing" constant="20" id="r32-t2-mTq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xMj-OH-hoT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aRn-VW-mU7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cp2-nW-7pr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-4686" y="-166"/>
         </scene>
     </scenes>
     <resources>

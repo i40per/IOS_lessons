@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
+    }
+    
     func newFontSize(_ label: UILabel, arithmeticOperators: ArithmeticOperators) {
         var oldSize = label.font.pointSize
         
@@ -58,9 +61,6 @@ class ViewController: UIViewController {
         }
         changeCountButton.backgroundColor = colorsArray[index]
         changeCountButton.setTitle("\(index + 1)", for: .normal)
-    }
-    
-    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
     }
     
     @IBAction func changeStateMinusTap(_ sender: Any) {
