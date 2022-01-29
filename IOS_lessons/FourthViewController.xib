@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FourthViewController" customModule="IOS_lessons" customModuleProvider="target">
+            <connections>
+                <outlet property="topLabelFourth" destination="x8y-y9-89x" id="kdp-BZ-NG0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8y-y9-89x">
+                    <rect key="frame" x="20" y="64" width="374" height="43"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjQ-v5-fP8">
+                    <rect key="frame" x="20" y="187" width="374" height="31"/>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="next"/>
+                    <connections>
+                        <action selector="nextScreenAction1:" destination="-1" eventType="touchUpInside" id="Tzc-Kx-pyr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZw-f5-NDr">
+                    <rect key="frame" x="20" y="127" width="79" height="46"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <color key="tintColor" systemColor="systemBlueColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="back">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="26"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="closeActionFourth:" destination="-1" eventType="touchUpInside" id="vUX-s8-ZhE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uZw-f5-NDr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="NUB-2g-uMX"/>
+                <constraint firstItem="uZw-f5-NDr" firstAttribute="top" secondItem="x8y-y9-89x" secondAttribute="bottom" constant="20" id="Tae-ZA-hdZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="x8y-y9-89x" secondAttribute="trailing" constant="20" id="Xib-gY-Z3S"/>
+                <constraint firstItem="VjQ-v5-fP8" firstAttribute="top" secondItem="x8y-y9-89x" secondAttribute="bottom" constant="80" id="fKa-gT-gpS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VjQ-v5-fP8" secondAttribute="trailing" constant="20" id="hpV-6n-RMp"/>
+                <constraint firstItem="x8y-y9-89x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="kfn-2u-Kho"/>
+                <constraint firstItem="VjQ-v5-fP8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="oHZ-9K-WGC"/>
+                <constraint firstItem="x8y-y9-89x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="xK8-1d-cyH"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="83"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
