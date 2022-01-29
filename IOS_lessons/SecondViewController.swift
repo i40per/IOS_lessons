@@ -13,8 +13,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        topLabel.text = "Урок 2  23.01.2022  Мой второй экран"
     }
     
     @IBAction func unwindToSecondViewController(_ unwindSegue: UIStoryboardSegue) {
@@ -24,5 +22,10 @@ class SecondViewController: UIViewController {
     @IBAction func manualShowScreen(_ sender: Any) {
         let thirdViewController = ThirdViewController()
         present(thirdViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func manualShowScreen2(_ sender: Any) {
+        let fourthViewController = FourthViewController()
+        present(fourthViewController, animated: true, completion: nil)
     }
 }
