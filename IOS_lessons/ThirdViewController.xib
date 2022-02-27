@@ -61,7 +61,7 @@
                 <constraint firstItem="a2I-eP-HOc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="tKj-Eh-apt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a2I-eP-HOc" secondAttribute="trailing" constant="20" id="waR-Ph-MVz"/>
             </constraints>
-            <point key="canvasLocation" x="-541" y="-7"/>
+            <point key="canvasLocation" x="142" y="-15"/>
         </view>
     </objects>
     <resources>

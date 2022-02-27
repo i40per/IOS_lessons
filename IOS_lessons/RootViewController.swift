@@ -11,17 +11,39 @@ class RootViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let houseData = ["RootTableViewCell","MySecondTableViewCell" ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "UITableView"
         
         tableView.register(UINib(nibName:"RootTableViewCell", bundle: nil), forCellReuseIdentifier: "rootCell")
         tableView.register(UINib(nibName:"MySecondTableViewCell", bundle: nil), forCellReuseIdentifier: "myRootCell")
     }
 }
 
+/*extension RootViewController: UITableViewDelegate {
+    
+    func tableView(_ myTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = myTableView.cellForRow(at: indexPath) as? MySecondTableViewCell else {
+            return
+        }
+        cell.backgroundColor = UIColor(red: CGFloat.random(in: 0.0...1.0), green: CGFloat.random(in: 0.0...1.0), blue: CGFloat.random(in: 0.0...1.0), alpha: 1)
+        
+    }
+}*/
+
 extension RootViewController: UITableViewDelegate {
     
     func tableView(_ myTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = DetailVC()
+        let indexPathString = "\(indexPath.row)"
+        vc.rootCellLabelName = indexPathString
+        self.navigationController?.pushViewController(vc, animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
         guard let cell = myTableView.cellForRow(at: indexPath) as? MySecondTableViewCell else {
             return
         }
@@ -33,16 +55,11 @@ extension RootViewController: UITableViewDelegate {
 extension RootViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return houseData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        /*
-         так как индекс ячеек в таблице начинается с нуля, то в проверке, для простоты, добавляем + 1 и смотрим
-         остаток от деления на два - если он равен 0 - то значит индекс ячейки попадает на
-         интервал каждой второй ячейки
-        */
         if ((indexPath.row + 1) % 2) == 0 {
             guard let myRootCell = tableView.dequeueReusableCell(withIdentifier: "myRootCell") else {
                 return UITableViewCell()
@@ -51,10 +68,7 @@ extension RootViewController: UITableViewDataSource {
             myRootCell.backgroundColor = .white
             return myRootCell
         } else {
-            /*
-             здесь соотвественно else - то есть все остальные случае (если первое условие не прошло),
-             то показываем нашу изначальную ячейку
-             */
+            
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "rootCell") else {
                 return UITableViewCell()
             }
@@ -62,5 +76,6 @@ extension RootViewController: UITableViewDataSource {
             cell.backgroundColor = .white
             return cell
         }
+        
     }
 }
